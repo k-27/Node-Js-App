@@ -1,4 +1,4 @@
-# Node-Js-App
+## User-Management-App
 
 This was created as part of Node code challenge
 
@@ -26,4 +26,14 @@ $ npm install
 $ npm start
 
 Go to http://localhost:4000/ 
+```
+## Form Validations
+Here are the things to consider while adding a new User
+
+```
+All fields are required.
+Emails Should be uique for different users
+Phone number should be 10 digits
+First Name should contain minimum length of 3
+
 ```
