@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>All Users</title>
+	</head>
+  <style>
+    .card {
+      background-color: rgb(220, 219, 219);
+      border: 1px solid black;
+      margin: 10px;
+      padding: 10px;
+      width: 50%
+    }
+    </style>
+	<body>
+    <a href ="/"> Go home</a>
+		<h1>All Users</h1>
+		<div>
+			<!--
+				Using FOREACH LOOP for the users array
+				
+				myArray.forEach(function(el, index) {
+					// el - current element, i - index
+				});
+			-->
+			<% users.forEach(function(user){ %>
+        <div class='card'>
+          <P>Name :<%= user.firstName %> <%= user.lastName %></p>
+          <P>Email :<%= user.email %> <a href='/viewuser/<%= user.id %>'>more details</a></p>
+        </div>
+       
+			
+			<% }) %>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add User</h1>
+
+        <% if(typeof alert != 'undefined'){ %>
+            <p>Waring!</p>
+            <% alert.forEach(function(error) { %>
+                <%= error.msg %>  <br>
+                <%}) %> 
+         <%} %>
+       
+        <a href="/viewusers" ><h4>View all users</h4></a>
+        <form action="/add" method="POST">
+            <div class="form-group">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="firstName" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="lastName" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="introduction" class="form-label">Introduction</label>
+                <input type="text" class="form-control" name="introduction" id="introduction" required>
+            </div>
+            <div class="form-group">
+                <label for="experience" class="form-label">Experience</label>
+                <input type="text" class="form-control" name="experience" id="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="achievements" class="form-label">Achievements</label>
+                <input type="text" class="form-control" name="achievements" id="achievements" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>
